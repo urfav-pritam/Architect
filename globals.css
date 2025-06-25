@@ -1,0 +1,115 @@
+/* Additional global styles that extend Tailwind */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Typography refinements */
+body {
+  @apply antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  @apply outline-none ring-2 ring-primary ring-offset-2;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-muted;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/50;
+}
+
+/* Selection styling */
+::selection {
+  @apply bg-primary/20 text-foreground;
+}
+
+/* Typography spacing */
+p {
+  @apply leading-relaxed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply tracking-tight leading-tight;
+}
+
+/* Image handling */
+img {
+  @apply max-w-full h-auto;
+}
+
+/* Form element consistency */
+input, textarea, select {
+  @apply text-base;
+}
+
+/* Container padding consistency */
+.container {
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+/* Button hover effect */
+button, .button {
+  @apply transition-all duration-200;
+}
+
+/* Link styling */
+a:not([class]) {
+  @apply text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+}
+
+/* Blockquote styling */
+blockquote {
+  @apply pl-4 border-l-4 border-primary/30 italic text-muted-foreground;
+}
+
+/* List styling */
+ul:not([class]), ol:not([class]) {
+  @apply pl-5;
+}
+
+ul:not([class]) {
+  @apply list-disc;
+}
+
+ol:not([class]) {
+  @apply list-decimal;
+}
+
+/* Table styling */
+table:not([class]) {
+  @apply w-full border-collapse;
+}
+
+table:not([class]) th,
+table:not([class]) td {
+  @apply border border-border p-2;
+}
+
+table:not([class]) th {
+  @apply bg-muted font-semibold;
+}
+
+/* Code styling */
+code:not([class]) {
+  @apply px-1.5 py-0.5 rounded bg-muted text-foreground text-sm;
+}
+
+/* Horizontal rule */
+hr:not([class]) {
+  @apply my-8 border-t border-border;
+}
